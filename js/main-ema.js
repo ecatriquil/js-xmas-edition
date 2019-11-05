@@ -41,7 +41,7 @@ function validarFormulario(e) {
         document.querySelector('#exito').className = '';
         $form.className = 'oculto';
         setTimeout(() => {
-            window.location.assign("file:///C:/Users/Emanuel/Documents/GitHub/js-xmas-edition/wishlist.html"); // 
+            window.location.assign("file:///C:/Users/Emanuel/Documents/GitHub/js-xmas-edition/wishlist.html"); //
         }, 5000);
     }
 
@@ -71,11 +71,10 @@ function manejarErrores(errores) {
             $form[key].className = ''
         }
     });
-
-    // Elimina mensajes de error
-
-
-
+        } else{
+            $form[key].className = ''
+        }
+    });
     // errorNombre = errores.nombre;
     // errorCiudad = errores.ciudad;
     // errorDescripcionRegalo = errores.regalo;
