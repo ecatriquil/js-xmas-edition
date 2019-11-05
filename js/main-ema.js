@@ -38,21 +38,21 @@ function validarFormulario(e) {
 
     const exito = manejarErrores(errores) === 0;
     if (exito) {
-        document.querySelector('#exito').className='';
+        document.querySelector('#exito').className = '';
         $form.className = 'oculto';
-        setTimeout(()=>{
+        setTimeout(() => {
             window.location.assign("file:///C:/Users/Emanuel/Documents/GitHub/js-xmas-edition/wishlist.html"); // 
         }, 5000);
     }
-    
+
     e.preventDefault();
 }
 
 function manejarErrores(errores) {
     const keys = Object.keys(errores);
     const $errores = document.querySelector('#errores');
-
-    let cantitadadErrores= 0;
+    let cantitadadErrores = 0;
+    console.log();
     if ($errores.children.length > 0) {
         while ($errores.hasChildNodes()) {
             $errores.removeChild($errores.firstChild);
@@ -66,12 +66,16 @@ function manejarErrores(errores) {
             const $error = document.createElement('li');
             $error.innerText = error;
             $errores.appendChild($error);
-        } else{
+        } else {
             // TICKET: borrar campo adecuado
             $form[key].className = ''
         }
     });
+
     // Elimina mensajes de error
+
+
+
     // errorNombre = errores.nombre;
     // errorCiudad = errores.ciudad;
     // errorDescripcionRegalo = errores.regalo;
