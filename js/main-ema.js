@@ -66,6 +66,12 @@ function manejarErrores(errores) {
             $form[key].className = ''
         }
     });
+    // Elimina mensajes de error
+    setTimeout(() => {
+        while ($errores.hasChildNodes()) {
+            $errores.removeChild($errores.firstChild);
+        }
+    }, 3000);
     // errorNombre = errores.nombre;
     // errorCiudad = errores.ciudad;
     // errorDescripcionRegalo = errores.regalo;
