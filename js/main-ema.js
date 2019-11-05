@@ -62,10 +62,16 @@ function manejarErrores(errores) {
             $error.innerText = error;
             $errores.appendChild($error);
         } else{
-            // TICKET: borrar campo adecuado
             $form[key].className = ''
         }
     });
+    // TICKET: borrar campo adecuado
+     // Elimina mensajes de error
+     setTimeout(() => {
+        while ($errores.hasChildNodes()) {
+            $errores.removeChild($errores.firstChild);
+        }
+    }, 3000);
     // errorNombre = errores.nombre;
     // errorCiudad = errores.ciudad;
     // errorDescripcionRegalo = errores.regalo;
