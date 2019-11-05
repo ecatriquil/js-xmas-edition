@@ -53,6 +53,11 @@ function manejarErrores(errores) {
     const $errores = document.querySelector('#errores');
 
     let cantitadadErrores= 0;
+    if ($errores.children.length > 0) {
+        while ($errores.hasChildNodes()) {
+            $errores.removeChild($errores.firstChild);
+        }
+    }
     keys.forEach(key => {
         const error = errores[key];
         if (error) {
@@ -67,11 +72,6 @@ function manejarErrores(errores) {
         }
     });
     // Elimina mensajes de error
-    setTimeout(() => {
-        while ($errores.hasChildNodes()) {
-            $errores.removeChild($errores.firstChild);
-        }
-    }, 3000);
     // errorNombre = errores.nombre;
     // errorCiudad = errores.ciudad;
     // errorDescripcionRegalo = errores.regalo;
