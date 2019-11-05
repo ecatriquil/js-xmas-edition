@@ -65,9 +65,11 @@ function manejarErrores(errores) {
             $form[key].className = ''
         }
     });
+  eliminar-errores
     // TICKET: borrar campo adecuado
      // Elimina mensajes de error
-     setTimeout(() => {
+    setTimeout(() => {
+  master
         while ($errores.hasChildNodes()) {
             $errores.removeChild($errores.firstChild);
         }
