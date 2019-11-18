@@ -71,10 +71,6 @@ function manejarErrores(errores) {
             $form[key].className = ''
         }
     });
-        } else{
-            $form[key].className = ''
-        }
-    });
     // errorNombre = errores.nombre;
     // errorCiudad = errores.ciudad;
     // errorDescripcionRegalo = errores.regalo;
